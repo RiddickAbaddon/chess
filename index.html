@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Szachy</title>
+	<link rel="stylesheet" href="main.css">
+	
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="engine.js"></script>
+</head>
+<body>
+	<div id="gameWrapper">
+		<table>
+			<tr>
+				<th id="whiteStat"><div id="whiteStatWrapper">
+					<div id="whiteName"></div>
+					<div id="whiteCmentary"><div class="waitForPromote">Wybierz figurę do promocji</div></div>
+				</div></th>
+				<th id="chessboard"><div id="squeresWrapper"></div></th>
+				<th id="blackStat"><div id="blackStatWrapper">
+					<div id="blackName"></div>
+					<div id="blackCmentary"><div class="waitForPromote">Wybierz figurę do promocji</div></div>
+				</div></th>
+			</tr>
+		</table>
+		<div id="gameDiary">Zaczynają białe.</div>
+	</div>
+	<div id="menuWrapper">
+		<button id="test1" onclick="test1()">Zmień Stronę</button>
+		<button id="test2" onclick="gm.backMove()">Poprzedni ruch</button>
+		<button id="test3" onclick="gm.restart()">Restart</button>
+		<table>
+			<tr>
+				<th></th>
+				<th id="menuButton" onclick="mm.openClose()">▼</th>
+				<th></th>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

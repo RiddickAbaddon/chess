@@ -1,0 +1,167 @@
+body {
+	margin: 0;
+	background: #333;
+}
+
+#test1 {
+	position: absolute;
+	bottom: 0;
+}
+#test2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#test3 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/*----------------------------------------
+Menu
+*/
+#menuWrapper {
+	width: 100vw;
+	height: 95vh;
+	top: -95vh;
+	position: fixed;
+	background: rgba(0,0,0,0.4);
+	transition: top .5s ease-out;
+	text-align: center;
+}
+#menuWrapper > table {
+	width: 100vw;
+	height: 5vh;
+	position: absolute;
+	bottom: -4.99vh;
+	border-collapse: collapse;
+}
+#menuWrapper > table > tbody > tr > th {
+	background-image: url('img/sideBar.png');
+	background-size: 5vh 5vh;
+}
+#menuButton {
+	background-image: url('img/centerBar.png') !important;
+	width: 10vh;
+	background-size: 10vh 5vh !important;
+	font-size: 2vh;
+	color: #222;
+	text-shadow: 0 0 1vh white;
+	cursor: pointer;
+	user-select: none;
+	transition: all .2s linear;
+}
+#menuButton:hover {
+	color: white;
+	text-shadow: 0 0 1vh black;
+}
+#menuButton:active {
+	color: transparent;
+}
+button {
+	background: rgba(0,0,0,0.4);
+	border: 0.2vh solid white;
+	font-size: 3vh;
+	color: white;
+	padding: 0.8vh 2vh;
+	text-shadow: 0 0 0.2vh black;
+	outline: none;
+	transition: all .2s linear;
+	cursor: pointer;
+}
+button:hover {
+	background: rgba(255,255,255,0.2);
+}
+/*----------------------------------------
+Game
+*/
+#gameWrapper {
+	position: fixed;
+	width: 100vw;
+	top: 5vh;
+	transition: top .8s ease-in;
+}
+#gameWrapper > table {
+	width: 100vw;
+	border-collapse: collapse;
+}
+#gameDiary {
+	width: 100vw;
+	height: 5vh;
+	text-align: center;
+	font-size: 2vh;
+	line-height: 5vh;
+}
+#whiteStatWrapper, #blackStatWrapper {
+	height: 90vmin;
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+#whiteName, #blackName {
+	width: 100%;
+	height: 5vh;
+	font-size: 2vh;
+	line-height: 5vh;
+	word-wrap: break-word;
+	position: absolute;
+}
+#whiteCmentary, #blackCmentary {
+	width: 90%;
+	word-wrap: break-word;
+	position: absolute;
+	bottom: 0;
+	border-radius: 1vmin;
+	left: 5%;
+}
+#whiteCmentary {
+	text-align: left;
+	background: white;
+}
+#blackCmentary {
+	text-align: right;
+	background: black;
+}
+.deadFigure {
+	width: 5vmin;
+	height: 5vmin;
+	display: inline-block;
+	margin-right: -4px;
+	margin-left: 4px;
+	margin-bottom: -4px;
+	margin-top: 4px;
+	background-size: cover;
+	opacity: 0;
+	transition: opacity .2s linear, box-shadow .2s ease-out;
+}
+.waitForPromote {
+	width: 100%;
+	text-align: center;
+	font-size: 0vw;
+	transition: all .2s linear;
+}
+
+/*----------------------------------------
+Chessboard
+*/
+#chessboard {
+	width: 90vmin;
+	height: 90vmin;
+	background-size: cover;
+	transition: all .5s linear;
+}
+#squeresWrapper {
+	margin: 5vmin;
+	width: 80vmin;
+	height: 80vmin;
+	position: relative;
+	transition: transform .5s ease-in-out;
+}
+.square, .figure {
+	position: absolute;
+	width: 10vmin;
+	height: 10vmin;
+	transition: box-shadow .2s ease-out, top .5s ease-in-out, left .5s ease-in-out, transform .5s ease-in-out;
+	background-size: cover;
+}
+
